@@ -140,6 +140,48 @@ const Resume = () => {
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
+
+          {/* content */}
+          <div className="w-full min-h-[70vh]">
+            {/* experience */}
+            <TabsContent value="experience" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <p className="max-w-[600px] text-white/75 text-justify mx-auto px-3 xl:mx-0 xl:px-0">
+                  {experience.description}
+                </p>
+                <ScrollArea>
+                  <ul className="grid grid-col-1 xl:grid-col-2 gap-[30px]">
+                    {experience.items.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <span>{item.duration}</span>
+                          <h3>{item.position}</h3>
+                          <div>
+                            {/* dot */}
+                            <span></span>
+                            <p>{item.company}</p>
+                          </div>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+            {/* education */}
+            <TabsContent value="education" className="w-full">
+              education
+            </TabsContent>
+            {/* skills */}
+            <TabsContent value="skills" className="w-full">
+              skills
+            </TabsContent>
+            {/* about */}
+            <TabsContent value="about" className="w-full">
+              about
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </motion.div>

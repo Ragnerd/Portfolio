@@ -16,7 +16,7 @@ export default function Home() {
               Hello I'm <br />
               <span className="text-accent-default">Moinul Faisal</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[550px] mb-9 px-4 text-white/80 text-justify xl:px-0">
               I excel at crafting digital products & services and am
               proficient in a number of programming languages and various technologies
             </p>
