@@ -110,12 +110,12 @@ const about = {
   info: [
     { Name: "Name", Value: "Moinul Islam Faisal" },
     { Name: "Phone", Value: "(+880) 1402-002561, (+880)1521-224726" },
-    { Name: "Experience", Value: "Faisal" },
+    { Name: "Experience", Value: "2+ Years" },
     { Name: "Vercel", Value: "https://vercel.com/ragnerds-projects" },
     { Name: "Nationality", Value: "Bangladeshi" },
     { Name: "Email", Value: "moinulislamfoysal.ie@gmail.com" },
     { Name: "Freelance", Value: "Available" },
-    { Name: "Language", Value: "English(Fluent), Bangla" },
+    { Name: "Language", Value: "English(Fluent), Bangla(Native)" },
   ],
 };
 
@@ -219,7 +219,7 @@ const Resume = () => {
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px] px-3">
+              <div className="flex flex-col gap-[30px] mx-3">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/75 text-justify mx-auto xl:mx-0">
@@ -249,8 +249,28 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* about */}
-            <TabsContent value="about" className="w-full">
-              about
+            <TabsContent value="about" className="w-full h-full">
+              <div className="flex flex-col gap-[30px] mx-3">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{about.title}</h3>
+                  <p className="max-w-[600px] text-white/75 text-justify mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center xl:justify-start gap-6"
+                      >
+                        <span className="text-white/75">{item.Name}</span>
+                        <span className="text-xl">{item.Value}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
