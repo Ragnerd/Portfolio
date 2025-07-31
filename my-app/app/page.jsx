@@ -17,8 +17,7 @@ export default function Home() {
               <span className="text-accent-default">Moinul Faisal</span>
             </h1>
             <p className="max-w-[550px] mb-9 px-4 text-white/80 text-justify xl:px-0">
-              I excel at crafting digital products & services and am
-              proficient in a number of programming languages and various technologies
+              I excel at crafting digital products & services. I am Passionate about creating intuitive and engaging user interface & experiences. Specialize in transforming your imagination into beautifully crafted products.
             </p>
             {/* button and Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -31,7 +30,10 @@ export default function Home() {
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent-default rounded-full flex items-center justify-center text-accent-default text-base hover:bg-accent-default hover:text-primary hover-transition-all duration-500"/>
+                <Social
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent-default rounded-full flex items-center justify-center text-accent-default text-base hover:bg-accent-default hover:text-primary hover-transition-all duration-500"
+                />
               </div>
             </div>
           </div>

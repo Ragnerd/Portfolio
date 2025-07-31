@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 import { useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -26,11 +26,14 @@ const projects = [
     description:
       "I am a passionate web developer with a focus on creating dynamic and responsive web applications. My expertise lies in both front-end and back-end technologies, allowing me to build complete solutions that meet user needs.",
     stack: [
-      { name: "Html 5", name: "Css3", name: "JavaScript", name: "React" },
+      { name: "Html5" },
+      { name: "Css3" },
+      { name: "JavaScript" },
+      { name: "React" },
     ],
-    Image: "assets/assets/work/thumb1.png",
-    Live: "",
-    Github: "",
+    image: "/thumb1.png",
+    live: "",
+    github: "",
   },
   {
     num: "02",
@@ -38,10 +41,15 @@ const projects = [
     title: "project 1",
     description:
       "I am a passionate web developer with a focus on creating dynamic and responsive web applications. My expertise lies in both front-end and back-end technologies, allowing me to build complete solutions that meet user needs.",
-    stack: [{ name: "Next.js", name: "Tailwind.css", name: "Node.js" }],
-    Image: "assets/assets/work/thumb2.png",
-    Live: "",
-    Github: "",
+    stack: [
+      { name: "Html5" },
+      { name: "Css3" },
+      { name: "JavaScript" },
+      { name: "React" },
+    ],
+    image: "/thumb2.png",
+    live: "",
+    github: "",
   },
   {
     num: "03",
@@ -49,22 +57,121 @@ const projects = [
     title: "project 3",
     description:
       "I am a passionate web developer with a focus on creating dynamic and responsive web applications. My expertise lies in both front-end and back-end technologies, allowing me to build complete solutions that meet user needs.",
-    stack: [{ name: "Next.js", name: "Tailwind.css" }],
-    Image: "assets/assets/work/thumb3.png",
-    Live: "",
-    Github: "",
+    stack: [
+      { name: "Html5" },
+      { name: "Css3" },
+      { name: "JavaScript" },
+      { name: "React" },
+    ],
+    image: "/thumb3.png",
+    live: "",
+    github: "",
   },
 ];
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+
+  const handleSlideChange = (swiper) => {
+    // get current slide index
+    const currentIndex = swiper.activeIndex;
+    // update project state based on current slide index
+    setProject(projects[currentIndex]);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
-      <div className="container mx-auto">projects</div>
+      <div className="container mx-auto">
+        <div className="flex flex-col w-full xl:flex-row xl:gap-[30px]">
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:jusify-between order-2 xl:order-none">
+            <div className="flex flex-col gap[30px] h-[50%]">
+              {/* outline num */}
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                {project.num}
+              </div>
+              {/* project category */}
+              <h2 className="text-[42px] font-bold leading-none text-white hover:text-accent-default transition-all duration-500 capitalize">
+                {project.category} project
+              </h2>
+              {/* project description */}
+              <p className="text-white/75">{project.description}</p>
+              {/* stock */}
+              <ul className="flex gap-4">
+                {project.stack.map((item, index) => {
+                  return (
+                    <li key={index} className="text-xl text-accent-default">
+                      {item.name}
+                    </li>
+                  );
+                })}
+              </ul>
+              {/* border */}
+              <div className="border border-white/20"></div>
+              {/* buttons */}
+              <div className="flex items-center gap-4">
+                {/* live project button */}
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-default" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* github project button */}
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsGithub className="text-white text-3xl group-hover:text-accent-default" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Github repository</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full xl:w-[50%]">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] mb-12"
+              onSlideChange={handleSlideChange}
+            >
+              {projects.map((project, index) => {
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative flex group justify-center items-center bg-pink-50/20">
+                      {/* overlay */}
+                      <div></div>
+                      {/* image */}
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          className="object-cover"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        </div>
+      </div>
     </motion.section>
   );
 };
