@@ -104,9 +104,9 @@ const skills = {
 
 //about data
 const about = {
-  title: "About Me",
+  title: "My Journey",
   description:
-    "I am a passionate web developer with a focus on creating dynamic and responsive web applications. My expertise lies in both front-end and back-end technologies, allowing me to build complete solutions that meet user needs.",
+    "My web development journey began with 'HTML, CSS, JavaScript: Beggining of your Web Development course' at codecademy, focusing on basics of development. I gained hands-on experience building dynamic applications, igniting thirst to become a skilled developer.",
   info: [
     { Name: "Name", Value: "Moinul Islam Faisal" },
     { Name: "Phone", Value: "(+880) 1402-002561, (+880)1521-224726" },
@@ -115,7 +115,7 @@ const about = {
     { Name: "Nationality", Value: "Bangladeshi" },
     { Name: "Email", Value: "moinulislamfoysal.ie@gmail.com" },
     { Name: "Freelance", Value: "Available" },
-    { Name: "Language", Value: "English(Fluent), Bangla(Native)" },
+    { Name: "Language", Value: "English (Fluent), Bangla (Native)" },
   ],
 };
 

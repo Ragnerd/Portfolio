@@ -50,14 +50,10 @@ const Contact = () => {
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent-default">
-                Let's work together
-              </h3>
+              <h3 className="text-4xl text-accent-default">Let's talk</h3>
               <p className="text-white/75">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-                distinctio rem libero illum vero aspernatur in voluptas, iusto
-                fuga incidunt, quo consequatur cumque quidem iste maiores.
-                Temporibus explicabo ullam maxime.
+                Define your goals and identify areas where I can add value to
+                your business.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
