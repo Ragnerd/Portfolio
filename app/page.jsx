@@ -3,6 +3,7 @@ import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,18 +18,24 @@ export default function Home() {
               <span className="text-accent-default">Moinul Faisal</span>
             </h1>
             <p className="max-w-[550px] mb-9 px-4 text-white/80 text-justify xl:px-0">
-              I excel at crafting digital products & services. I am Passionate about creating intuitive and engaging user interface & experiences. Specialize in transforming your imagination into beautifully crafted products.
+              I specialize in designing and delivering impactful digital
+              products and services. With a strong passion for creating
+              intuitive and engaging user interfaces and experiences, I focus on
+              transforming ideas into well-crafted, user-centered solutions that
+              drive value and engagement.
             </p>
             {/* button and Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <Link href="/Curriculum Vitae.pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

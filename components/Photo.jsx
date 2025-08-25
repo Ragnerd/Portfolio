@@ -20,14 +20,14 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[297px] h-[297px] xl:w-[497px] xl:h-[497px] mix-blend-lighten absolute"
         >
           <Image
             src="/1680372823413.png"
             fill
             priority
             quality={100}
-            alt=""
+            alt="Moinul Faisal"
             className="object-contain"
           />
         </motion.div>
@@ -40,9 +40,9 @@ const Photo = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
-            cx="253"
-            cy="253"
-            r="250"
+            cx="251"
+            cy="251"
+            r="251"
             stroke="#24EAEA"
             strokeWidth="4"
             strokeLinecap="round"
