@@ -11,7 +11,7 @@ export default function Home() {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="text-center xl:text-left order-2 xl:order-0">
             <span className="text-xl">Web Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           {/* photo */}
-          <div className="order xl:order-none mb:8 xl:mb-0">
+          <div className="order xl:order-0 mb:8 xl:mb-0">
             <Photo />
           </div>
         </div>
