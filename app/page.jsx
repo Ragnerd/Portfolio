@@ -15,7 +15,7 @@ export default function Home() {
             <span className="text-xl">Web Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />
-              <span className="text-accent-default">Moinul Faisal</span>
+              <span className="text-accent-default">Moinul Faisal akbar</span>
             </h1>
             <p className="max-w-[550px] mb-9 px-4 text-white/80 text-justify xl:px-0">
               I specialize in designing and delivering impactful digital
