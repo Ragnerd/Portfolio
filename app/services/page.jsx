@@ -72,7 +72,9 @@ const Services = () => {
                 </h2>
 
                 {/* description */}
-                <p className="text-white/85 font-stretch-expanded">{service.description}</p>
+                <p className="text-white/85 font-stretch-expanded">
+                  {service.description}
+                </p>
                 <div className="border-b border-white/30 w-full"></div>
               </div>
             );
