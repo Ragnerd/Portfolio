@@ -25,12 +25,12 @@ export default function Home() {
               drive value and engagement.
             </p>
             {/* button and Socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-8 justify-center xl:justify-start">
               <Link href="/Curriculum Vitae.pdf">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="uppercase flex items-center gap-2"
+                  className="uppercase flex items-center gap-2 cursor-pointer"
                 >
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
